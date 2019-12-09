@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   <style>
+       body{
+           background-image: url(./6.jpg);
+           background-size: cover;
+       }
+   </style>
+   <link rel="stylesheet" href="./Register.css">
+</head>
+<body>
+        <center>
+                <header><h1>Employee Registration Form</h1></header>
+        <form action="#" method="POST" >
+            <input type="radio" name="gender" value="Mr"><label>Mr.</label>
+            <input type="radio" name="gender" value="Mrs."><label>Mrs.</label>
+            <input type="radio" name="gender" value="Ms."><label>Ms.</label><br><br>
+            <label>First Name</label>
+            <input type="text" placeholder="First Name"><br><br>
+            <label>Last Name</label>
+            <input type="text" placeholder="Last Name"><br><br>
+            <label>Mail Address1</label>
+            <input type="text"><br><br>
+            <label>Mail Address2</label>
+            <input type="text"><br><br>
+            <label>City</label>
+            <input type="text"><br><br>
+            <label>State</label>
+            <input list="States">
+            <datalist id="States">
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Gujarat">Gujarat</option>
+            </datalist><br><br>
+            Upload Photo:<input type="file"><br><br>
+            <label for="">E-Mail</label>
+            <input type="email"><br><br>
+            <label for="">Moblie</label>
+            <input type="text" value="+91"><br><br>
+            <label for="">Laguages Known</label>
+            <input type="checkbox" value="Gujarati">Gujarati<br>
+            <input type="checkbox" value="Hindi">Hindi<br>
+            <input type="checkbox" value="English">English<br>
+            <input type="checkbox" value="Marathi">Marathi<br><br>
+            <footer>Optional</footer><br>
+            <h3>Additional Information</h3><br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </center>
+</body>
+</html>
