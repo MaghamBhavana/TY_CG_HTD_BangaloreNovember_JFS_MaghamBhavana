@@ -1,0 +1,9 @@
+driverClass=com.mysql.jdbc.Driver
+dbUrl=jdbc:mysql://localhost:3306/ContactFile
+dbUser=root
+dbPassword=root
+query1=select * from Contact
+insertQuery=insert into users_info values(?,?,?)
+UserBeanQuery=select * from users_info where userid=? and password=?
+deleteQuery=delete from users_info where userid=? and password=?
+updateQuery=update users_info set email = ? where userid=? and password=?

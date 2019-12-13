@@ -1,0 +1,38 @@
+package com.capgemini.module1.services;
+
+import java.util.List;
+import com.capgemini.module1.dto.Mobile;
+
+public class PhoneAppSerImpli implements PhoneAppSer{
+
+	@Override
+	public List<Mobile> getAllContacts() {
+		
+		return null;
+	}
+
+	@Override
+	public Mobile singleContact(String name) {
+		
+		return null;
+	}
+
+	@Override
+	public boolean addContact(Mobile user) {
+		
+		return false;
+	}
+
+	@Override
+	public boolean deleteContact(String name) {
+		
+		return false;
+	}
+
+	@Override
+	public boolean editContact(String name) {
+		
+		return false;
+	}
+
+}

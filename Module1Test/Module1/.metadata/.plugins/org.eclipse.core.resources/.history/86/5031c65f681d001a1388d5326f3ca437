@@ -1,0 +1,38 @@
+package com.capgemini.module1.dao;
+
+import java.util.List;
+import com.capgemini.module1.dto.Mobile;
+
+public class PhoneAppDAOImpl implements PhoneApp{
+
+	@Override
+	public List<Mobile> getAllContacts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Mobile singleContact(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean addContact(Mobile user) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deleteContact(String name) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean editContact(String name) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

@@ -1,0 +1,46 @@
+package com.capgemini.module1.contact;
+
+import java.util.List;
+import java.util.Scanner;
+import com.capgemini.factoryclass.FactoryClass;
+import com.capgemini.module1.dto.Mobile;
+import com.capgemini.module1.services.PhoneAppSer;
+
+public class Cases {
+	static PhoneAppSer ser= FactoryClass.instanceOfServ();
+	static Scanner sc=new Scanner(System.in);
+	public static void showAllContacts()
+	{
+		List<Mobile> l=ser.getAllContacts();
+		if(l!=null)
+		{
+			for (Mobile mobile : l) {
+				System.out.println(mobile);
+			}
+		}
+		
+	}
+	public static void searchForContact()
+	{
+		while(true)
+		{
+			System.out.println("1.call\n2.message\n3.back\n4.exit");
+			int ch=sc.nextInt();
+			switch (ch) 
+			{
+			case 1:System.out.println("calling---------");
+			break;
+			case 2:System.out.println("Now u can send the msg--");
+			break;
+			case 3:System.out.println("Back to menu");
+			PhoneMenu.main(null);
+			}
+			
+		}
+	}
+	public static void operateContact()
+	{
+		
+	}
+
+}

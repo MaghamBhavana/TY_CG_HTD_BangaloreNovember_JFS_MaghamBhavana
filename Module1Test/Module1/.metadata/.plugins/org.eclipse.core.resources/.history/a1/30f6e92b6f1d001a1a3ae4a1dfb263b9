@@ -1,0 +1,25 @@
+package com.capgemini.module1.contact;
+
+import java.util.List;
+import java.util.Scanner;
+import com.capgemini.factoryclass.FactoryClass;
+import com.capgemini.module1.dto.Mobile;
+import com.capgemini.module1.services.PhoneAppSer;
+
+public class Cases {
+	static PhoneAppSer ser= FactoryClass.instanceOfServ();
+	Scanner sc=new Scanner(System.in);
+	public static void showAllContacts()
+	{
+		List<Mobile> l=ser.getAllContacts();
+	}
+	public static void searchForContact()
+	{
+		
+	}
+	public static void operateContact()
+	{
+		
+	}
+
+}

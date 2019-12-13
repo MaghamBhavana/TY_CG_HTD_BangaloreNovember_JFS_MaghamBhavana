@@ -1,0 +1,6 @@
+package com.capgemini.module1.dao;
+
+public interface PhoneApp {
+	
+
+}

@@ -1,0 +1,28 @@
+package com.capgemini.module1.contact;
+
+import java.util.Scanner;
+
+public class PhoneMenu {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Your choice");
+		System.out.println("1.Show all contacts\n2.Search for Contact\n3.Operate on contact\n4.Exit");
+		int ch=sc.nextInt();
+		while(true)
+		{
+			switch (ch)
+			{
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:System.exit(0);
+			
+			}
+			
+		}
+	}
+
+}

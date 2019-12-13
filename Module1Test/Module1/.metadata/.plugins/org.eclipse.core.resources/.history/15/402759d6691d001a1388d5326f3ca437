@@ -1,0 +1,21 @@
+package com.capgemini.module1.contact;
+
+import java.util.Scanner;
+
+public class Cases {
+	
+	Scanner sc=new Scanner(System.in);
+	public static void showAllContacts()
+	{
+		
+	}
+	public static void searchForContact()
+	{
+		
+	}
+	public static void operateContact()
+	{
+		
+	}
+
+}

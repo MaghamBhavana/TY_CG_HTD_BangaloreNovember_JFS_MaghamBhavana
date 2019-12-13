@@ -1,0 +1,59 @@
+package com.capgemini.module1.dao;
+
+import java.io.FileReader;
+import java.util.List;
+import java.util.Properties;
+import com.capgemini.module1.dto.Mobile;
+
+public class PhoneAppDAOImpl implements PhoneApp{
+	FileReader reader;
+	Properties prop;
+	Mobile moblie;
+	
+	public PhoneAppDAOImpl()
+	{
+		try 
+		{
+			reader = new FileReader("db.properties");
+			prop = new Properties();
+			prop.load(reader);
+			Class.forName(prop.getProperty("driverClass"));
+		} 
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public List<Mobile> getAllContacts() {
+		
+		
+		return null;
+	}
+
+	@Override
+	public Mobile singleContact(String name) {
+		
+		return null;
+	}
+
+	@Override
+	public boolean addContact(Mobile user) {
+		
+		return false;
+	}
+
+	@Override
+	public boolean deleteContact(String name) {
+		
+		return false;
+	}
+
+	@Override
+	public boolean editContact(String name) {
+		
+		return false;
+	}
+
+}

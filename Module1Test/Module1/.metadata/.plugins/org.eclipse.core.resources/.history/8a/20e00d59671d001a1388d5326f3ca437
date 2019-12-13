@@ -1,0 +1,6 @@
+package com.capgemini.module1.dto;
+
+public class Mobile {
+	
+
+}

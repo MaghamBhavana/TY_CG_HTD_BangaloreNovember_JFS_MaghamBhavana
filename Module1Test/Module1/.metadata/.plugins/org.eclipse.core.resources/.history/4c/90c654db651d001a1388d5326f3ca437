@@ -1,0 +1,8 @@
+package com.capgemini.module1.contact;
+
+public class PhoneMenu {
+	public static void main(String[] args) {
+		
+	}
+
+}
