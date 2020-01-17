@@ -1,0 +1,29 @@
+<div class="alert alert-danger" appColor>{{message}}</div>
+<div class="container mt-3">
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Price</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let product of products; index as i' appColor 
+            [ngClass]='{
+                "list-group-item-success" : product.price < 2000
+                    
+            }'>
+                <td appColor>{{i+1}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.image}}</td>
+                <td>{{product.price}}</td>
+                <td><button class="btn btn-outline-primary float-right"
+                    (click) ='deleteLateComer(products)'>Delete
+                </button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

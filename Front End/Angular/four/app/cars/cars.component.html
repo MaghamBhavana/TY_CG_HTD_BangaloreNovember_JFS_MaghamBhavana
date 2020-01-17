@@ -1,0 +1,11 @@
+<div class="col-md-3 float-left">
+    <div class="card card-body" *ngFor='let car of cars'>
+        <img src="{{car.imageURL}}" alt="" height="200px"
+        (click)='selectCar(car)'>
+
+        <div class="text-center">{{car.name}}</div>
+
+    </div>
+
+</div>
+<app-carchild [carDetails]='selectedCar'></app-carchild>

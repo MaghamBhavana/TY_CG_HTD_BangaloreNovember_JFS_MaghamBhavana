@@ -1,0 +1,24 @@
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+<div class="col-md-4 offset-md-4 mt-4">
+    <h4 class="text-center text-secondary">Update Product!!!</h4>
+    <form #editForm='ngForm' (ngSubmit)='updateProduct(editForm)'>
+
+        <input type="hidden" name="id" id="id" #id="ngModel" class="form-control" required [(ngModel)]='productService.selectedProductToUpdate.id'>
+
+        <div class="form-group">
+            <label for="name">Product Name</label>
+            <input type="text" name="name" id="name" #name="ngModel" class="form-control" required [(ngModel)]='productService.selectedProductToUpdate.name'>
+        </div>
+        <div class="form-group">
+            <label for="url">Product Image URL</label>
+            <input type="text" name="url" id="url" #url="ngModel" class="form-control" required [(ngModel)]='productService.selectedProductToUpdate.url'>
+        </div>
+        <div class="form-group">
+            <label for="cost">Product Cost</label>
+            <input type="text" name="cost" id="cost" #url="ngModel" class="form-control" required pattern="[0-9]{10}" [(ngModel)]='productService.selectedProductToUpdate.cost'>
+        </div>
+        <button type="submit" class="btn btn-outline-primary float-right">
+            Edit Product
+        </button>
+    </form>
+</div>

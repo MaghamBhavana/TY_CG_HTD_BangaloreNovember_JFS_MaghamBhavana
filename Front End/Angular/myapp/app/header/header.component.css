@@ -1,0 +1,23 @@
+body{        
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.fixed-header {
+  width: 100%;
+  background: skyblue;
+  padding: 20px 0;
+
+}
+nav a{
+  color: white;
+  text-decoration: none;
+  padding: 7px 25px;
+  display: inline-block;
+}
+.container p{
+  line-height: 20px; 
+}
+.bhav {
+  float: right;
+}

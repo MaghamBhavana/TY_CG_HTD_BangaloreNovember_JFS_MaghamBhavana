@@ -1,0 +1,88 @@
+<div class="col-md-4 offset-md-4 mt-5">
+    <form [formGroup]='registerForm' (ngSubmit)='submitForm()'>
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" name="name" id="name" formControlName='name' class="form-control">
+            <div class="text-danger" *ngIf='name.touched && name.invalid'>
+                <div *ngIf='name.errors.required'>
+                    *This field is mandatory.
+                </div>
+                <div *ngIf='name.errors.minlength'>
+                    *Minimum 5 characters required.
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label><input type="email" name="email" id="email" formControlName='email'
+                class="form-control">
+            <div class="text-danger" *ngIf='email.touched && email.invalid'>
+                <div *ngIf='email.errors.required'>
+                    *This field is mandatory.
+                </div>
+                <div *ngIf='email.errors.minlength'>
+                    *Minimum 5 characters required.
+                </div>
+                <div *ngIf='email.errors.email'>
+                    It accepts only email type.
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" formControlName='password' class="form-control">
+            <div class="text-danger" *ngIf='password.touched && password.invalid'>
+                <div *ngIf='password.errors.required'>
+                    *This field is mandatory.
+                </div>
+                <div *ngIf='password.errors.minlength'>
+                    *Minimum 8 characters required.
+                </div>
+                <div *ngIf='password.errors.maxlength'>
+                    *Maximum 8 characters required.
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label><input type="number" name="age" id="age" formControlName='age'
+                class="form-control">
+            <div class="text-danger" *ngIf='age.touched && age.invalid'>
+                <div *ngIf='age.errors.required'>
+                    *This field is mandatory.
+                </div>
+                <div *ngIf='age.errors.maxlength'>
+                    *Maximum 3 characters required.
+                </div>
+            </div>
+        </div>
+        <div formArrayName='skills'>
+            <div class="mb-3">
+                <span class="h4 text-secondary">Skills</span>
+                <button class="btn btn-outline-dark float-right" type="button" (click)='addSkill()'>
+                    Add Skill
+                </button>
+            </div>
+            <div *ngFor='let control of skills.controls; index as i'>
+                <div class="form-group">
+                    <label for="skills{{i+1}}">Skill {{i+1}}</label>
+                    <div class="col-md-12 mb-3">
+                        <input type="text" name="skill{{i+1}}" class="form-control col-md-10 float-left"
+                            [formControlName]='i'>
+                        <button type="button" class="btn btn-secondary float-left col-md-2" (click)='deleteSkill(i)'>
+                            &times;
+                        </button>
+                    </div>
+                    <div *ngIf='skills.controls[i].invalid && skills.controls[i].touched'>
+                        <div class="text-danger" *ngIf='skills.controls[i].errors.required'>
+                            *This Field is required.
+                        </div>
+                        <div class="text-danger" *ngIf='skills.controls[i].errors.minlength'>
+                            *Minimum 3 characters are required.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <button type="submit" class="btn btn-primary float-right mt-5">Register</button>
+    </form>
+</div>

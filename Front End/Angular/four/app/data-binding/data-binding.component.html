@@ -1,0 +1,22 @@
+<h1>{{10+100}}</h1>
+<img [src]="imgURL" >
+<p [style.background]='flag ? "green" : "red"',
+[style.color]='flag ? "red" : "green"'>
+   Bhavana
+</p>
+
+<!-- <p [class.h1] ='flag' [class.blind]='!flag'>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+     Dicta labore ex, quo ipsam cumque numquam obcaecati? 
+    Voluptate quo inventore sequi pariatur sapiente dolor. 
+    Ex nam veniam doloribus molestiae rerum. Eius!
+</p> -->
+
+<!-- <input type="text" name="myInput" #myInput> -->
+
+<input type="text" name="twoWayData" [(ngModel)] = 'twoWayData'>
+{{twoWayData}}
+
+<button (click)='printData()' class="btn btn-outline-success">ClickMe</button>
+
+

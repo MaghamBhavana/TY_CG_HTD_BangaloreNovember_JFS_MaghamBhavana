@@ -1,0 +1,16 @@
+<div class="col-md-4 mt-4 offset-md-4">
+    <form #loginForm='ngForm' (ngSumbit)='login(loginForm)'>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" #email='ngModel' ngModel name="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="pasword" class="form-control" id="password" #password='ngModel' ngModel name="password" required minlength="8">
+        </div>
+        <div class="form-group btn btn-outline-primary">
+            <label for="submit">Submit</label>
+            <!-- <input type="submit" class="form-control" id="submit"> -->
+        </div>
+    </form>
+</div>

@@ -1,0 +1,60 @@
+<div class="col-md-4 offset-md-4">
+    <form #loginform='ngForm' (ngSubmit)='submitForm(loginForm)'>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" minlength="8" required #email='ngModel' ngModel
+                class="form-control" email>
+            <div *ngIf='email.touched && email.invalid'>
+                <div class="alert alert-danger" *ngIf='email.errors.required'>
+                    This field is mandatory.
+                </div>
+                <div class="alert alert-danger" *ngIf='email.errors.minlength'>
+                    Minimum 8 characters are required.
+                </div>
+                <div class="alert alert-danger" *ngIf='email.errors.email'>
+                    This field only accepts email.
+                </div>
+            </div>
+        </div>
+        <div class="form-group"> 
+            <label for="phone">Phone Number</label>
+            <input type="text" name="phone" id="phone" pattern="[0-9]{10}" #phone='ngModel' ngModel required class="form-control">
+            <div *ngIf='phone.invalid && phone.touched'>
+                <div class="alert alert-danger" *ngIf='phone.errors.pattern'>
+                        This take Only a phone Number.
+                </div>
+
+            </div>
+            
+
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" #password='ngModel' ngModel class="form-control" 
+            required pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g">
+            <div *ngIf='password.invalid && password.touched'>
+                <div class="alert alert-danger" 
+                *ngIf='password.errors.required'>
+                    This feild is mandatory.
+                </div>
+                <div class="alert alert-danger"
+                *ngIf='password.errors.pattern'>
+                    Password should contains 1 Upper case, 1 Lower case, 1 numeric and 1 special character.
+                    And lenght should be in between 6 to 15.
+                </div>
+
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" 
+            min="{{todaysDate | date : 'yyyy-MM-dd'}}" #date='ngModel' ngModel required class="form-control">
+
+        </div>
+        <button type="submit"  class="btn btn-primary float-right">
+            Login</button>
+
+    </form>
+
+</div>

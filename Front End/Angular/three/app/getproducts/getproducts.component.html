@@ -1,0 +1,33 @@
+<h2>{{date | date: 'yyyy-MMM-dd' | uppercase}}</h2>
+<div class="col-md-4 offset-md-4 mt-3 mb-3">
+    <input type="search" name="search" class="form-control" [(ngModel)]='search' placeholder="Enter Product name to search">
+
+</div>
+<div class="alert alert-danger" *ngIf='message'>{{message}}
+    <span class="float-right">
+        <button (click)='deleteMessage()'>&times;</button>
+    </span>
+</div>
+<div class="col-md-3 float-left mt-3" *ngFor='let product of products | filterProducts: search'>
+    <div class="card">
+        <div class="card-header">
+            {{product.name | titlecase}}
+        </div>
+        <div class="card-body">
+            <img [src]="product.url" alt="product url" height="200px" width="100%">
+            <p>Rs: {{product.cost}}.00</p>
+        </div>
+        <div class="card-footer">
+            <div class="btn-group col-md-12">
+                <button class="btn btn-outline-success" (click)='selectProduct(product)'>
+                    Update
+                </button>
+                <button class="btn btn-outline-dark" (click)='deleteProduct(product)'>
+                    Delete
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+</div>

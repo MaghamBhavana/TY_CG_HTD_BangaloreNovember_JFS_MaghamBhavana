@@ -1,0 +1,8 @@
+<div class="col-md-4 off-set-4 mt-5">
+    <input type="text" #id class="form-control mb-3" placeholder="Enter Id to navigate">
+    <input type="text" #name class="form-control mb-3" placeholder="Enter User name">
+    <input type="text" #imgURL class="form-control mb-3" placeholder="Enter Image URL">
+    <button class="btn btn-primary" (click)='goToId(id.value, name.value, imgURL.value)'>
+Go To Id
+</button>
+</div>
