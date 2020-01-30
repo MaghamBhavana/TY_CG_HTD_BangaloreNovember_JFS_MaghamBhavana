@@ -1,0 +1,9 @@
+<div *ngIf='!bikeDetails' class="display-3 text-center">
+    Please select a bike.
+</div>
+<div class="col-md-9 float-left" *ngIf='bikeDetails'>
+    <img src="{{bikeDetails.imageURL}}" alt="" width="100%" height="400px">
+    <h4 class="text-center">{{bikeDetails.name}}</h4>
+    <p>{{bikeDetails.details}}</p>
+
+</div>
